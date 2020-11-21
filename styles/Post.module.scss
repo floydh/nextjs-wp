@@ -1,0 +1,46 @@
+.post {
+    position: relative;
+    width: 100%;
+}
+
+.post__item {
+  position: relative;
+	padding: 0 12px;
+  position: relative;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.post__item-figure {
+  display: block;
+	margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  position: relative;
+}
+
+.post__item-figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.post__item-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.post__item-title {
+  font-size: 1.575rem;
+	margin: 0 auto;
+  padding: 24px 0;
+}
+
+.post__item-title {
+	margin-bottom: 0;
+	padding-bottom: 24px;
+}
