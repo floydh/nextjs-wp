@@ -1,10 +1,11 @@
 import nodemailer from "nodemailer"
 
+const os = require('os');
 const emailPass = "cy~}b^iIu5Jb"
 // port 587?
 
 const transporter = nodemailer.createTransport({
-    host: "mail.floydhartford.com",
+    host: os.hostname(),
     port: 25,
     auth: {
         user: "nextjsapp@floydhartford.com",
