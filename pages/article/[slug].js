@@ -1,5 +1,7 @@
 import React from 'react';
-import DefaultLayout from '@layouts/default'
+import Head from 'next/head';
+import DefaultLayout from '@layouts/default';
+import { getConfig } from '@api';
 import styles from '../../styles/Post.module.scss';
 
 function Article(props) {
@@ -18,6 +20,10 @@ function Article(props) {
 	return (
 		<>
     	<DefaultLayout title='title' description='the post description'>
+				<Head>
+					<title>{props.title}</title>
+					<meta name='description' content={props.description}/>
+				</Head>
 				<div id="post" className={styles.post}>
 					{articles}
 				</div>
@@ -27,12 +33,17 @@ function Article(props) {
 }
 
 export async function getServerSideProps(context) {
-	const res = await fetch("https://headless.floydhartford.com/admin/wp-json/wp/v2/posts?_embed&per_page=1&slug=" + context.params.slug);
+	const res = await fetch("http://headless.floydhartford.com/admin/wp-json/wp/v2/posts?_embed&per_page=1&slug=" + context.params.slug);
 	const dataset = await res.json();
+	const config = await getConfig();
+
+	console.warn(dataset);
 
   return {
     props: {
-			dataset
+			dataset,
+			title: dataset[0].title.rendered,
+      description: dataset[0].excerpt.rendered,
 		},
   }
 }
