@@ -23,4 +23,3 @@ export const sendContactMail = async (recipientMail, name, senderMail, content) 
         return error
     }
 }
-//[1]
