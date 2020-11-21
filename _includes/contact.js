@@ -1,7 +1,6 @@
 import { Component } from "react"
 import TextareaAutosize from "react-autosize-textarea"
 import { sendContactMail } from "../_components/networking/mail-api"
-//[1]
 
 class Contact extends Component {
     state = {
@@ -20,8 +19,7 @@ class Contact extends Component {
             <div>
                 <div className="grid">
                     <div className="col-8">
-                        <h2>Contact form title</h2>
-                        <p>Contact form introduction text</p>
+                        <p>This is a contact form (demo).</p>
                     </div>
                 </div>
                 <div className="grid">
