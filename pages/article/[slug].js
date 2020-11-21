@@ -27,7 +27,7 @@ function Article(props) {
 }
 
 export async function getServerSideProps(context) {
-	const res = await fetch("http://headless.floydhartford.com/admin/wp-json/wp/v2/posts?_embed&per_page=1&slug=" + context.params.slug);
+	const res = await fetch("https://headless.floydhartford.com/admin/wp-json/wp/v2/posts?_embed&per_page=1&slug=" + context.params.slug);
 	const dataset = await res.json();
 
   return {

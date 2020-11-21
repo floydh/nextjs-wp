@@ -15,7 +15,7 @@ export default class Blog extends Component {
   }
 
   componentDidMount() {
-    let postsurl = "http://headless.floydhartford.com/admin/wp-json/wp/v2/posts?_embed";
+    let postsurl = "https://headless.floydhartford.com/admin/wp-json/wp/v2/posts?_embed";
     fetch(postsurl)
     .then(response => response.json())
     .then(response => {
