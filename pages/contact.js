@@ -1,7 +1,7 @@
 // pages/index.js
 import React, { Component } from 'react';
 import DefaultLayout from '@layouts/default';
-import Contact from "../_includes/contact";
+import MyForm from "../_components/forms/contact";
 import Link from 'next/link';
 import { getConfig, getAllPosts } from '@api';
 import styles from '../styles/Home.module.scss';
@@ -18,7 +18,7 @@ export default class Blog extends Component {
       <DefaultLayout title='Home' description='the Home description'>
         <div>
           <h1 className='page-title'>Contact</h1>
-          <Contact />
+          <MyForm />
         </div>
       </DefaultLayout>
     )
