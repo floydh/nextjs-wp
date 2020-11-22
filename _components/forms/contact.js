@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../../styles/Contact.module.scss";
 
 export default class MyForm extends React.Component {
   constructor(props) {
@@ -16,13 +17,24 @@ export default class MyForm extends React.Component {
         onSubmit={this.submitForm}
         action="https://formspree.io/f/mbjpkvvy"
         method="POST"
+				className={styles.form}
       >
-        <label>Email:</label>
-        <input type="email" name="email" />
-        <label>Message:</label>
-        <input type="text" name="message" />
-        {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
-        {status === "ERROR" && <p>Ooops! There was an error.</p>}
+				<div className={styles['input-field']}>
+	        <label className={styles['input-field__label']}>Email:</label>
+	        <div className={styles['input-field__input-wrapper']}>
+					  <input className={styles['input-field__input']} type="email" name="email" placeholder="you@example.com" />
+					</div>
+				</div>
+				<div className={styles['input-field']}>
+	        <label className={styles['input-field__label']}>Message:</label>
+					 <div className={styles['input-field__input-wrapper']}>
+	        	<input className={styles['input-field__input']} type="text" name="message" placeholder="What's up?" />
+					 </div>
+				</div>
+				<div className={styles['form__actions']}>
+	        {status === "SUCCESS" ? <div className={styles['form__response'] + ' ' + styles['form__response--success']}><p>Thanks!</p></div> : <button className={styles.button + ' ' + styles['button--primary']}>Submit</button>}
+	        {status === "ERROR" && <div className={styles['form__response'] + ' ' + styles['form__response--error']}><p>Ooops! There was an error.</p></div>}
+				</div>
       </form>
     );
   }

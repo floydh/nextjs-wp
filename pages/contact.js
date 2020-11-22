@@ -1,7 +1,7 @@
 // pages/index.js
 import React, { Component } from 'react';
 import DefaultLayout from '@layouts/default';
-import MyForm from "../_components/forms/contact";
+import ContactForm from "../_components/forms/contact";
 import Link from 'next/link';
 import { getConfig, getAllPosts } from '@api';
 import styles from '../styles/Home.module.scss';
@@ -15,10 +15,10 @@ export default class Blog extends Component {
 
   render() {
     return (
-      <DefaultLayout title='Home' description='the Home description'>
+      <DefaultLayout title='Contact' description='contact page description'>
         <div>
           <h1 className='page-title'>Contact</h1>
-          <MyForm />
+          <ContactForm />
         </div>
       </DefaultLayout>
     )

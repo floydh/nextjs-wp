@@ -14,7 +14,7 @@ export default class Blog extends Component {
 
   render() {
     return (
-      <DefaultLayout title='Home' description='the Home description'>
+      <DefaultLayout title='About' description='the About description'>
         <div>
           <h1 className='page-title'>About</h1>
           <p>Floyd Hartford is a website developer from Maine. He built this website using NextJS and WordPress to create a headless experience. You might have arrived here from <Link href="https://floydhartford.com"><a>floydhartford.com</a></Link>...</p>
