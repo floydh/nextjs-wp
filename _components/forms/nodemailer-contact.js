@@ -19,8 +19,9 @@ class Contact extends Component {
             <div>
                 <div className="grid">
                     <div className="col-8">
-                        <h2>Contact form title</h2>
-                        <p>Contact form introduction text</p>
+                        <h2>Send Floyd a Message</h2>
+                        <p><b>built with:</b> React, NextJS, Nodemailer, GoDaddy SMTP
+												<br/><b>function:</b> This form sends an email message.</p>
                     </div>
                 </div>
                 <div className="grid">

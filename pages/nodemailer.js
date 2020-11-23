@@ -6,7 +6,7 @@ export default function nodemaileremail (props) {
 
 	return (
 		<DefaultLayout title='Send It' description='This is an SMTP email sender page'>
-		<h1>SMTP Nodemailer Form</h1>
+		<h1>Nodemailer Form</h1>
 		<Contact />
 		</DefaultLayout>
 	)
