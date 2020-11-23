@@ -15,10 +15,12 @@
     "sass": "^1.29.0"
   },
   "devDependencies": {
+    "axios": "^0.21.0",
     "gray-matter": "^4.0.2",
     "isomorphic-unfetch": "^3.1.0",
     "marked": "^1.2.5",
     "nodemailer": "^6.4.16",
-    "raw-loader": "^4.0.2"
+    "raw-loader": "^4.0.2",
+    "react-autosize-textarea": "^7.1.0"
   }
 }
